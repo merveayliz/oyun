@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkade Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div id="welcome-screen">
+            <div class="glass-form">
+                <h1>EĞLENCEYE HAZIR MISIN ?</h1>
+                <button class="start-btn" onclick="menuyuGoster()">HAZIRIM!</button>
+            </div>
+        </div>
+        
+        <div id="menu-screen" class="hidden">
+            <h2>OYUNUNU SEÇ</h2>
+            <div class="menu-grid">
+                <button class="menu-card" onclick="oyunuBaslat('hafiza')">🎴 Hafıza Kartları</button>
+                <button class="menu-card" onclick="oyunuBaslat('toplar')">&#x1F388; Top Eşleştirme</button>
+            </div>
+        </div>
+        
+        <div id="game-container" class="hidden">
+            <div id="memory-game" class="game-box hidden"></div>
+            <div id="ball-game" class="game-box hidden"></div>
+            <button onclick="anaMenuyeDon()" class="back-btn">Geri Dön</button>
+        </div>
+        
+        <div id="win-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>🎉 AFERİN!</h2>
+                <p>Görevi başarıyla tamamladın.</p>
+                <button class="start-btn" onclick="anaMenuyeDon()">HARİKA!</button>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
